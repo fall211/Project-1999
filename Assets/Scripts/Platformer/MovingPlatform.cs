@@ -18,7 +18,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    private void Update(){
+    private void LateUpdate(){
         if (Input.GetKeyDown(KeyCode.R)) MovePlatform();
 
         if (waypoints.Length == 0) return;
