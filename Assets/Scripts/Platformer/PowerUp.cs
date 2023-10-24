@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    
+
+
+    public virtual void OnPickup(){
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.CompareTag("Player")) {
+            OnPickup();
+        }
     }
+
+
 }

@@ -9,17 +9,6 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private List<GameObject> gameButtons = new List<GameObject>();
     private Game currentGame = Game.Puzzle;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //HighlightSelectedGame();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void HighlightSelectedGame(){
         foreach (GameObject button in gameButtons){
@@ -38,6 +27,7 @@ public class MainMenuManager : MonoBehaviour
         MySceneManager.Instance.LoadScene(FromGame(currentGame));
     }
     public void SetCurrentGame(string game){
+        if (!GameStateManager.Instance.unlockedGames.Contains(game)) return;
         currentGame = ToGame(game);
         HighlightSelectedGame();
     }
@@ -69,6 +59,10 @@ public class MainMenuManager : MonoBehaviour
         CYOA,
         Runner,
         TopDown,
+    }
+
+    public void QuitGame(){
+        Application.Quit();
     }
 
 }

@@ -46,6 +46,7 @@ public class Remote : MonoBehaviour
         isPickedUp = true;
         GetComponent<SpriteRenderer>().enabled = false;
         // TODO: enable UI to show what the player can do.
+        GameObject.Find("PuzzleManager").GetComponent<PuzzleManager>().ShowRemoteTip();
     }
 
     private void OnTriggerEnter2D(Collider2D other){

@@ -15,6 +15,7 @@ public class Key : MonoBehaviour
         isPickedUp = true;
         GetComponent<SpriteRenderer>().enabled = false;
         puzzleManager.AddKey();
+        puzzleManager.ShowInteractTip();
     }
 
     private void OnTriggerEnter2D(Collider2D other){
@@ -23,4 +24,6 @@ public class Key : MonoBehaviour
             onPickUp();
         }
     }
+
+
 }

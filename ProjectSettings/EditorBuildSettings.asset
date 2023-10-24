@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: bc346cf96c22949189059abaeda7c412
+  - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 88beb51277c094f3faef9d37641b9d1e
+  - enabled: 1
+    path: Assets/Scenes/CYOA.unity
+    guid: dc3ace5febbd24dbb8b0f476a820c23e
+  - enabled: 1
+    path: Assets/Scenes/Runner.unity
+    guid: 28373377aae094ab0ba0737215cd50d9
+  - enabled: 1
+    path: Assets/Scenes/TopDown.unity
+    guid: 679c4f44c02254348b167029ad256ac3
   m_configObjects: {}

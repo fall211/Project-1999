@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Coin
   - Key
+  - GameButton
+  - Platform
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - Player
   - Pickup
   - Obstacle
-  - 
+  - Interactable
   - 
   - 
   - 

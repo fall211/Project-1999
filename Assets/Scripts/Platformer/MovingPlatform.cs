@@ -11,6 +11,7 @@ public class MovingPlatform : MonoBehaviour
     private int currentWaypoint = 0;
     private int targetWaypoint = 0;
     private float timer = 0f;
+    private bool onCooldown = false;
 
     private void Start(){
         if (waypoints.Length > 0) {
@@ -18,7 +19,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    private void LateUpdate(){
+    private void Update(){
         if (Input.GetKeyDown(KeyCode.R)) MovePlatform();
 
         if (waypoints.Length == 0) return;
@@ -28,6 +29,7 @@ public class MovingPlatform : MonoBehaviour
         if (timer >= travelTime) {
             transform.position = waypoints[targetWaypoint].position;
             currentWaypoint = targetWaypoint;
+            onCooldown = false;
         }
 
         transform.position = Vector3.Lerp(
@@ -40,8 +42,10 @@ public class MovingPlatform : MonoBehaviour
     }
 
     public void MovePlatform(){
+        if (onCooldown) return;
         timer = 0f;
         targetWaypoint = (targetWaypoint + 1) % waypoints.Length;
+        onCooldown = true;
     }
 
 }
