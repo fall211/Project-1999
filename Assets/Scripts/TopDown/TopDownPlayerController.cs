@@ -20,6 +20,8 @@ public class TopDownPlayerController : MonoBehaviour
 
 
     private void Update() {
+        if (TopDownManager.Instance.state != TopDownManager.GameState.Playing) return;
+        Debug.Log(TopDownManager.Instance.state);
         _lastPosition = transform.position;
         _movementInput = new(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         

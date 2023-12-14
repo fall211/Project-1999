@@ -16,6 +16,18 @@ public class MySceneManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void QuitGame(){
+        Application.Quit();
+    }
+
+    public void ReturnToMenu(){
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void StartGame(){
+        SceneManager.LoadScene("TopDown");
+    }
+
 }
 
 

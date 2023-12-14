@@ -9,6 +9,11 @@ TagManager:
   - GameButton
   - Platform
   - PowerUp
+  - Boss
+  - Enemy
+  - Damageable
+  - Bullet
+  - Pylon
   layers:
   - Default
   - TransparentFX
@@ -20,8 +25,8 @@ TagManager:
   - Pickup
   - Obstacle
   - Interactable
-  - 
-  - 
+  - Projectile
+  - Enemy
   - 
   - 
   - 
